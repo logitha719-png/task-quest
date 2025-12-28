@@ -1,0 +1,232 @@
+/* Background */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: linear-gradient(135deg, #5e60ce, #48bfe3, #64dfdf);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+    color: #333;
+}
+
+/* Main card */
+.container {
+    width: 380px;
+    background: #ffffffee;
+    padding: 40px;
+    border-radius: 35px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    animation: pop 0.5s ease;
+}
+
+@keyframes pop {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* Title */
+.title {
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+    color: #2d2d2d;
+    margin-bottom: 15px;
+}
+
+/* Inputs */
+.input {
+    width: 90%;
+    padding: 12px;
+    border-radius: 14px;
+    border: 2px solid #d8d8d8;
+    margin: 8px 0;
+    font-size: 15px;
+    background: #fafafa;
+    transition: 0.2s;
+}
+
+.input:focus {
+    border-color: #5e60ce;
+    background: #ffffff;
+}
+
+/* Buttons */
+.btn {
+    width: 100%;
+    padding: 12px;
+    border-radius: 14px;
+    border: none;
+    cursor: pointer;
+    margin-top: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    color: white;
+    transition: 0.25s;
+}
+
+/* Button colors (soft game palette) */
+.neon { background: #5e60ce; }
+.orange { background: #ff9f1c; }
+.blue { background: #00b4d8; }
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+/* Task Cards */
+#taskList div {
+    padding: 14px;
+    border-radius: 15px;
+    margin-top: 12px;
+    font-size: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    animation: slideUp 0.5s ease;
+}
+
+@keyframes slideUp {
+    from { transform: translateY(15px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Gamified Color Coding */
+.urgent {
+    background: #ff6b6b;
+    color: #fff;
+}
+.soon {
+    background: #ffd93d;
+    color: #333;
+}
+.relaxed {
+    background: #6bcf63;
+    color: #fff;
+}
+
+/* Complete button inside task */
+#taskList button {
+    margin-top: 8px;
+    padding: 6px 12px;
+    border-radius: 10px;
+    border: none;
+    background: #333;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* Focus mode text */
+#focusModeMsg {
+    margin-top: 12px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}
+.hidden {
+    display: none;
+}
+
+/* XP HUD */
+.xp-box {
+    margin-top: 20px;
+    padding: 15px;
+    background: #f4f4ff;
+    border-radius: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    border: 2px solid #5e60ce;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.10);
+}
+
+/* XP numbers look like game values */
+#xp, #level {
+    color: #5e60ce;
+    font-weight: 900;
+}
+/* XP Progress Bar */
+.progress-container {
+    width: 100%;
+    height: 14px;
+    background: #dcdcff;
+    border-radius: 10px;
+    margin-top: 12px;
+    overflow: hidden;
+}
+
+#xpBar {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #5e60ce, #6930c3);
+    border-radius: 10px;
+    transition: width 0.6s ease-out;
+}
+/* Full onboarding screen */
+#onboarding {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #5e60ce, #48bfe3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    animation: fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Onboarding Card */
+.onboard-card {
+    background: #ffffffdd;
+    padding: 30px;
+    width: 320px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+    animation: popIn 0.7s ease;
+}
+
+@keyframes popIn {
+    0% { transform: scale(0.7); opacity: 0; }
+    60% { transform: scale(1.05); opacity: 1; }
+    100% { transform: scale(1); }
+}
+
+.game-title {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+.game-sub {
+    font-size: 16px;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+/* Start Game Button */
+.start-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    font-weight: 700;
+    border: none;
+    border-radius: 14px;
+    background: #5e60ce;
+    color: white;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.start-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
