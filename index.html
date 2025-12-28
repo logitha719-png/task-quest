@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Quest - Gamified To-Do App</title>
+    <link rel="stylesheet" href="todo.css">
+</head>
+<body>
+<div id="onboarding">
+    <div class="onboard-card">
+        <h1 class="game-title">!!Task Quest!!</h1>
+        <p class="game-sub">!Your Productivity Begins!</p>
+
+        <button class="start-btn" onclick="startGame()">Start Journey</button>
+    </div>
+</div>
+<div class="container">
+    <h2 class="title">Smart To-Do App</h2>
+    <input id="taskInput" type="text" placeholder="Task name" class="input">
+    <input id="deadlineInput" type="date" class="input">
+    <button class="btn neon" onclick="addTask()">Add Task</button>
+    <button class="btn orange" onclick="voiceAdd()"> Voice Input</button>
+    <button class="btn blue" onclick="toggleFocus()">Focus Mode</button>
+    <div id="taskList"></div>
+    <p id="focusModeMsg" class="hidden">Focus Mode ON – Showing only your main task!</p>
+    <div id="xpBox" class="xp-box">
+        XP: <span id="xp">0</span> | Level: <span id="level">1</span>
+        <div class="progress-container">
+            <div id="xpBar"></div>
+        </div>
+    </div>
+
+</div>
+<script src="todo.js"></script>
+</body>
+</html>
